@@ -1,16 +1,24 @@
 {
-  "name": "tab-origin",
-  "title": "Tab Origin",
-  "id": "jid1-x6Qlg0AY3jAeaQ",
-  "description": "Return to the page from which you opened this tab.",
-  "author": "Peter Elmers",
-  "license": "MPL 2.0",
-  "version": "0.1",
-  "preferences": [{
-      "name": "hotkey",
-      "title": "Hotkey",
-      "description": "Press this key to open the active tab's origin location",
-      "type": "string",
-      "value": "accel-shift-u"
-  }]
+    "name": "tab-origin",
+    "title": "Tab Origin",
+    "id": "jid1-x6Qlg0BY3jAeaQ",
+    "description": "Return to the page from which you opened this tab.",
+    "author": "Peter Elmers",
+    "license": "MPL 2.0",
+    "version": "0.2",
+    "preferences": [
+    {
+        "name": "switchIfPossible",
+        "title": "Switch if possible",
+        "description": "Switch to origin tab if it's already open",
+        "type": "bool",
+        "value": true
+    },
+    {
+        "name": "hotkey",
+        "title": "Hotkey",
+        "description": "Press this key to open the active tab's origin location",
+        "type": "string",
+        "value": "accel-shift-u"
+    }]
 }
