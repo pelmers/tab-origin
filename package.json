@@ -5,7 +5,7 @@
     "description": "Return to the page from which you opened this tab.",
     "author": "Peter Elmers",
     "license": "MPL 2.0",
-    "version": "0.3",
+    "version": "0.4",
     "preferences": [
     {
         "name": "switchIfPossible",
@@ -17,7 +17,7 @@
     {
         "name": "showContextMenu",
         "title": "Show context menu",
-        "description": "Display 'Back to origin tab' in the right-click menu",
+        "description": "Display 'Back to Origin Tab' in the right-click menu on the tab bar",
         "type": "bool",
         "value": true
     },
