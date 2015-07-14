@@ -5,7 +5,7 @@
     "description": "Return to the page from which you opened this tab.",
     "author": "Peter Elmers",
     "license": "MPL 2.0",
-    "version": "0.4",
+    "version": "0.4.1",
     "preferences": [
     {
         "name": "switchIfPossible",
