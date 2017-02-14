@@ -1,15 +1,8 @@
-[Tab Origin](https://addons.mozilla.org/en-US/firefox/addon/tab-origin/)
-==============
+Tab Origin
+==========
 
-Have you ever opened a new tab and later wanted to go back to where it came
-from, only to realize that the parent tab is long gone?
+Chrome and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/tab-origin/) extension to open the parent page of the current tab.
 
-Maybe that's just me.
+In both Chrome and Firefox I suggest the keyboard shortcut Ctrl-Shift-U. (Command on Mac).
 
-Anyway, this addon solves that problem by keeping track of the URL that
-originated each tab, so you can return to it with a configurable shortcut
-defaulting to cmd/ctrl-shift-u.
-
-It also puts a "Back to Origin Tab" option in the tab browser context menu.
-
-If you like it, leave a review! (only if you like it :D)
+If you like it, leave a review!
