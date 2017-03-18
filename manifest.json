@@ -3,13 +3,14 @@
     "name": "Tab Origin",
     "description": "Return to the page from which you opened this tab.",
     "author": "Peter Elmers",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "icons": {
         "48": "drawing.png",
         "128": "drawing128.png"
     },
     "permissions": [
-        "tabs"
+        "tabs",
+        "storage"
     ],
     "browser_action": {
         "default_icon": "drawing.png"
