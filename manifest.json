@@ -3,7 +3,7 @@
     "name": "Tab Origin",
     "description": "Return to the page from which you opened this tab.",
     "author": "Peter Elmers",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "icons": {
         "48": "drawing.png",
         "128": "drawing128.png"
@@ -17,7 +17,7 @@
     },
     "commands": {
         "_execute_browser_action": {
-            "suggested-key": {
+            "suggested_key": {
                 "default": "Ctrl+Shift+U"
             }
         }
