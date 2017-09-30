@@ -3,7 +3,7 @@
     "name": "Tab Origin",
     "description": "Return to the page from which you opened this tab.",
     "author": "Peter Elmers",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "icons": {
         "48": "drawing.png",
         "128": "drawing128.png"

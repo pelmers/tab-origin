@@ -19,12 +19,10 @@ function openTabOrigin(tab) {
         if (last(result_stack)) {
             api.tabs.query({url: last(result_stack)}, function(matches) {
                 if (matches.length > 0) {
-                    console.log("Found switch to " + matches[0].id + ", activating now");
                     api.tabs.update(matches[0].id, {active: true});
                     api.windows.update(matches[0].windowId, {focused: true});
                 } else {
                     const dest = last(result_stack);
-                    console.log("Opening tab for url " + dest);
                     api.tabs.create({url: dest, index: tab.index}, function(newtab) {
                         // We don't want to set the last tab to the one we just came
                         // from (this one), instead we want to inherit the parent tab
@@ -70,7 +68,6 @@ api.tabs.onActivated.addListener(info => {
 });
 
 api.tabs.onCreated.addListener(function(tab) {
-    console.log("CREATED!", tab.id);
     if (tab.openerTabId !== undefined) {
         api.tabs.get(tab.openerTabId, function(match) {
             if (match !== undefined) {
@@ -84,9 +81,7 @@ api.tabs.onCreated.addListener(function(tab) {
         // in firefox openerTabId is not set for tabs opened by alt-enter in address bar.
         // (it's only set for tabs opened from links on the page)
         api.storage.local.get(activeTabKey, tabId => {
-            console.log("actiavet tab is...", tabId);
             api.tabs.get(tabId[activeTabKey], match => {
-                console.log(match);
                 if (match !== undefined) {
                     updateOpenerState(tab, match);
                 } else {
