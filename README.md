@@ -7,3 +7,5 @@ and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/tab-origin/) extens
 In both Chrome and Firefox I suggest the keyboard shortcut Ctrl-Shift-U. (Command on Mac).
 
 If you like it, leave a review!
+
+Now also available on [Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/tab-origin/pjokhhddbfamccemjneocheekkoognbo).
