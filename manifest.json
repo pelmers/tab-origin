@@ -1,6 +1,6 @@
 {
-    "manifest_version": 2,
-    "name": "Tab Origin",
+    "manifest_version": 3,
+    "name": "[DEV] Tab Origin",
     "description": "Return to the page from which you opened this tab.",
     "author": "Peter Elmers",
     "version": "1.0.4",
@@ -12,7 +12,7 @@
         "tabs",
         "storage"
     ],
-    "browser_action": {
+    "action": {
         "default_icon": "drawing.png"
     },
     "commands": {
@@ -24,6 +24,10 @@
     },
     "background": {
         "scripts": ["background.js"],
-        "persistent": false
+        "type": "module"
+    },
+    "options_ui": {
+        "page": "options/options.html",
+        "browser_style": false
     }
 }
