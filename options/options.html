@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tab Origin Settings</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body style="min-height: 400px;">
+	<div class="form-group">
+		<label for="extension-action-type" class="w-30">Extension Action</label>
+		<select id="extension-action-type" class="w-45">
+			<option value="open-tab">Open tab (default)</option>
+			<option value="go-to-tab-if-open">Go to tab if it's open</option>
+			<option value="show-popup">Show popup</option>
+		</select>
+		<div class="w-30"></div>
+		<div class="w-45 form-group-hint"></div>
+	</div>
+	<script src="./options.js" type="module"></script>
+</body>
+</html>
