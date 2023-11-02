@@ -37,6 +37,12 @@ function extensionButtonClick(tab) {
 
     const tabId = tab.id.toString();
 
+    // TODO since bg script is not persistent
+    // it is possible that `currentActionType` will be `undefined`
+    // despite I have it set in storage, thus breaking everything.
+    // As a possible solution I have to await "action type".
+    // So I have to always open popup, and popup decides
+    // if it should close itself
     if (currentActionType === actionType.SHOW_POPUP 
         || currentActionType === actionType.GO_TO_TAB_IF_OPEN) {
         api.action.setPopup({ popup: '/popup/popup.html' })

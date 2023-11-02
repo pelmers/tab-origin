@@ -1,0 +1,1 @@
+copy /Y "./manifest.ff.json" "./manifest.json"

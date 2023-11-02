@@ -8,10 +8,12 @@
 </head>
 <body class="d-none origin-tab-info-wrap">
 	<p class="origin-info-label">origin tab url</p>
-	<input type="text" readonly 
-		class="origin-tab-info-url bg-blink" 
-		value="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions" title="Click to copy link">
-	<p class="status-label bg-blink"></p>
+	<input type="text" readonly
+		class="origin-tab-info-url bg-blink"
+		value="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions" 
+		data-origin-url="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions" 
+		title="Click to copy link">
+	<p class="error-label bg-blink" title="Click to copy Error text"></p>
 	<button class="btn-main">Open Tab</button>
 	<footer class="origin-tab-info-footer">
 		<a href="#" class="btn-open-ext-settings" title="Open extension settings">settings</a>
