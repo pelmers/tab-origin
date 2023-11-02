@@ -1,13 +1,28 @@
-* {
+*, *::after, *::before {
 	box-sizing: border-box;
 }
 
 :root {
+	--text-size-small: 13px;
 	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+}
+
+.options-page-body {
+	min-height: 400px;
+	font-size: 16px;
+}
+
+@media (min-width: 400px) {
+	.options-page-body {
+		min-width: 400px;
+	}
 }
 
 .bg-blink {
+	/* bg color when mouse is over elt */
 	--bg-blink-color-hover: transparent;
+	/* bg color when elt is clicked */
 	--bg-blink-color-active: transparent;
 	--bg-blink-time: 0.1s;
 	transition: background-color var(--bg-blink-time) linear;
@@ -76,10 +91,9 @@ select {
 	--bg-blink-color-active: hsl(228, 100%, 82%);
 }
 
-.origin-tab-info-url:hover {
-}
-
-.origin-tab-info-url:active {
+.fade-out-text {
+	color: transparent;
+	transition: color 1s linear 2s;
 }
 
 .btn-main {
@@ -113,34 +127,29 @@ select {
 	color: gray;
 }
 
-.status-label {
+.error-label {
 	/* normal line-height is 1.2, 
-	so to fit 2 lines 2 * 1.2em */
-	height: calc(2 * 1.2em);
+	so to fit 2 lines the height must be 2 * 1.2em */
+	min-height: calc(2 * 1.2em);
 	margin: 6px 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	font-size: 13px;
-	color: transparent;
-	overflow: hidden;
+	font-size: var(--text-size-small);
+	color: crimson;
+	background: transparent;
+	user-select: none;
 }
 
-.copied-label-anim {
-	animation: change-color 3s linear 0s 1 normal;
+.error-label.active {
+	user-select: text;
+	cursor: copy;
 }
 
-@keyframes change-color {
-	0% { color: transparent; }
-	7% { color: gray; }
-	50% { color: gray; }
-	100% { color: transparent; }
-}
-
-.bg-blink.color-err {
+.error-label.bg-blink.active {
 	--bg-blink-color-hover: transparent;
-	--bg-blink-color-active: rgb(255, 227, 233);
+	--bg-blink-color-active: rgb(252, 209, 218);
 	--bg-blink-time: 0.15s;
 }
 	
