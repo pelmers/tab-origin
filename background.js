@@ -6,6 +6,14 @@ const api = chrome;
 
 const activeTabKey = "activeTab";
 
+/** Holds origin tab data when popup is shown.
+ * Popup script requests this data when a user
+ * decides to open origin tab.
+ * 
+ * NOTE: Assuming background script is never terminated
+ * while popup is open it should be fine to hold the data
+ * that way.
+ */
 let lastTabOriginData = {}
 
 /** What action should be done when user clicks extension button */
@@ -72,8 +80,9 @@ function extensionButtonClick(tab) {
                         
                     } else if (currentActionType === actionType.GO_TO_TAB_IF_OPEN) {
 
-                        if (originTabIsOpen)
+                        if (originTabIsOpen) {
                             lib.focusTab(originTabId, windowId)
+                        }
                         else {
                             lastTabOriginData = tabOriginData
                         }
@@ -81,8 +90,9 @@ function extensionButtonClick(tab) {
                     } else {
                         // otherwise it is default "open tab" action
 
-                        if (originTabIsOpen)
+                        if (originTabIsOpen) {
                             lib.focusTab(originTabId, windowId)
+                        }
                         else {
                             lib.createTab(url, currentTabIndex, result_stack)
                                 .catch(err => {
